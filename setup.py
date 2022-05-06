@@ -19,7 +19,7 @@ with open("electricpy/__init__.py", encoding="utf-8") as fh:
     ver = re.search('_version_ = \"(.*)\"', file_str).group(1)
     # Version Breakdown:
     # MAJOR CHANGE . MINOR CHANGE . MICRO CHANGE
-    print("Setup for:",name,"   Version:",ver)
+    print("Setup for:", name,"   Version:", ver)
 
 # Generate Setup Tools Argument
 setuptools.setup(
@@ -31,7 +31,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/engineerjoe440/ElectricPy",
-    packages=setuptools.find_packages(),
+    packages=["electricpy"],
     install_requires = read_dependencies(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -42,5 +42,5 @@ setuptools.setup(
         "Source Repository": "https://github.com/engineerjoe440/ElectricPy",
         "Bug Tracker": "https://github.com/engineerjoe440/ElectricPy/issues",
         "Documentation": "https://engineerjoe440.github.io/ElectricPy/",
-        }
+    }
 )
